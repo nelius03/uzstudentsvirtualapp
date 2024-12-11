@@ -1,8 +1,8 @@
 // RegisterPage.js
 import React, { useState } from 'react';
-import './Register.css'; // Import the CSS file
+import './Register.css'; 
 
-const RegisterPage = () => {
+const Register = () => {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [regNumber, setRegNumber] = useState('');
