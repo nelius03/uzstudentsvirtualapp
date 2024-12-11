@@ -2,7 +2,7 @@
 import React from 'react';
 import './Home.css'; // Import the CSS file
 
-const HomePage = () => {
+const Home = () => {
     return (
         <div className="hero">
             <h1>Campus Virtual Assistant</h1>
