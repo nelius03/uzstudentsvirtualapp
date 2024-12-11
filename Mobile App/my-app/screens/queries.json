@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "query": "Current Fees",
+      "response": "Current Fees: $2000"
+    },
+    {
+      "id": 2,
+      "query": "Missing Result",
+      "response": "No results found."
+    },
+    {
+      "id": 3,
+      "query": "Email Problem",
+      "response": "Please check your email settings."
+    },
+    {
+      "id": 4,
+      "query": "Directions",
+      "response": "Building B, Room 101."
+    },
+    {
+      "id": 5,
+      "query": "Faculties Chairpersons",
+      "response": "Check the faculty section in the portal."
+    }
+  ]

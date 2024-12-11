@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Assistant</title>
+    <link rel="stylesheet" href="css/log.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required placeholder="Enter your username">
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required placeholder="Enter your password">
+            
+            <button type="submit" onclick="login()">Login</button>
+        </form>
+        <p>Don't have an account? <a href="/reg">Register here</a></p>
+    </div>
+
+    <script>
+        document.getElementById('login-form').onsubmit = function(e) {
+            e.preventDefault();
+            alert("Login successful!");
+            window.location.href = '/virtualassist'; // Redirect to virtual assistant
+        };
+    </script>
+
+
+    <script>
+         function login() {
+        const username = document.getElementById('loginEmail').value;
+        const password = document.getElementById('loginPassword').value;
+
+        fetch('/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ username: username, password: password })
+        })
+        .then(response => {
+            if (response.ok) {
+                localStorage.setItem('loggedIn', 'true'); // Set login flag
+                window.location.href = '/virtualassist'; // Redirect to virtual assistant
+            } else {
+                document.getElementById('loginError').textContent = 'Invalid credentials';
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+    </script>
+    
+</body>
+</html>

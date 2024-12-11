@@ -1,0 +1,134 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #343a40;
+}
+
+.chat-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px; /* Maximum width for better responsiveness */
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    overflow: hidden;
+}
+
+.welcome-note {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #007bff; /* Blue color for welcome note */
+    font-size: 1.3em; /* Slightly larger font */
+}
+
+.messages {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    font-size: 0.95em; /* Adjusted font size for better readability */
+}
+
+.message {
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 80%; /* Limit message width for better layout */
+    word-wrap: break-word; /* Allow long words to break */
+}
+
+/* Style for user messages */
+.user {
+    text-align: right;
+    background-color: #d1e7dd; /* Light green for user messages */
+    color: #0f5132; /* Dark green text */
+    margin-left: auto; /* Align user messages to the right */
+    margin-right: 0; /* Reset right margin */
+    border-radius: 10px;
+    padding: 8px 10px;
+}
+
+/* Style for support messages */
+.support {
+    border-radius: 10px;
+    text-align: left;
+    background-color: #f8d7da; /* Light red for support messages */
+    color: #721c24; /* Dark red text */
+    margin-left: 0; /* Align support messages to the left */
+    margin-right: auto; /* Ensure they align to the left */
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* Space above the input */
+}
+
+input[type="text"] {
+    padding: 12px;
+    width: calc(100% - 60px); /* Adjust width for send button */
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1em; /* Larger font for input */
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none; /* Remove outline */
+}
+
+button {
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px; /* Space between input and button */
+    font-size: 1em; /* Larger font for buttons */
+    transition: background-color 0.3s, transform 0.2s; /* Added transition for effect */
+}
+
+button.visible {
+    display: block; /* Show when input has text */
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.02); /* Slightly enlarge button on hover */
+}
+
+.logout-button {
+    background-color: #dc3545;
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+}
+
+.faculty-list {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.faculty-item {
+    margin: 5px 0;
+}
+
+@media (max-width: 600px) {
+    .chat-container {
+        height: 90vh; /* Adjust height for smaller screens */
+    }
+}
