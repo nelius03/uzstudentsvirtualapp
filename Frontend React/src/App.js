@@ -10,11 +10,7 @@ const App = () => {
     return (
         <Router>
             <div>
-                <nav>
-                    <button onClick={() => window.location.href = '/'}>Home</button>
-                    <button onClick={() => window.location.href = '/login'}>Login</button>
-                    <button onClick={() => window.location.href = '/register'}>Register</button>
-                </nav>
+                
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/login" element={<Login />} />
